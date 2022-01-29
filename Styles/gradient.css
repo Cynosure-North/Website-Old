@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Righteous&display=swap');
+
+*{
+	/*margin: 0px;*/
+	scrollbar-color: #222 #000;
+}
+
+*:focus-visible{
+	filter:invert(100%) drop-shadow(0px 0px 5px #000);
+}
+
+#gradient{
+	display: none;
+}
+
+#mask{
+	display: none;
+}
+
+#window{
+	margin: 3% 0px 0px 2%;
+	width: 1000px;
+
+	background-color: #fff9;
+	padding: 0px 20px 20px 20px;
+	border-radius: 20px;
+}
+
+#compass{
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: -10px;
+	width: 80px;
+	height: 80px;
+}
+
+#needle{
+	position: relative;
+	left: -80px;
+	width: 80px;
+	height: 80px;
+
+	pointer-events: none;
+	transition: transform 2s ease-in-out;
+}
+
+a:hover + #needle{
+	transform: rotate(180deg);
+}
+
+
+.sidebar{
+	position: absolute;
+	left: calc(3% + 1050px);
+	top: 55px;
+	width: 500px;
+	border-radius: 20px;
+}
+
+
+body{
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+	background-size: 1800% 1800%;
+	animation: rainbow 18s ease infinite;}
+}
+
+header{
+	height: 70px;
+}
+
+h1{
+	display: inline-block;
+	position: relative;
+	top: -0.9em;
+	font-family: 'Righteous', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+h2{
+	font-family: 'Righteous', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+p{
+	font-family: 'Fira Code', monospace;
+	font-weight: 500;
+	clear: left;
+}
+
+a{
+	display: inline-block;
+	height: 0px;
+	font-weight: 700;
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover, a:active{
+	text-decoration: underline;
+}
+
+footer{
+	width: 1010px;
+
+	background-color: #fff9;
+	margin: 10px 0px 0px 2%;
+	padding: 15px 20px 15px 10px;
+	border-radius: 20px;
+}
+
+footer a{
+	font-family: 'Fira Code', monospace;
+	background-color: #fff9;
+	border-radius: 10px;
+	padding-left: 10px;
+}
+
+
+@media screen and (max-width: 1620px) {
+
+	.sidebar{
+		left: calc(100% + 15px);
+	}
+
+	#window{
+		top: 3%;
+	}
+
+	#window, footer{
+		left: 2%;
+		right: 2%;
+		width: calc(96% - 550px);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+
+	#window, footer{
+		width: calc(96% - 40px);
+	}
+	
+	.sidebar{
+		position: static;
+		width: 100%;
+	}
+
+}
+
+@media (scripting: none) or (scripting:  initial) or (prefers-reduced-motion){
+	canvas{
+		display: none;
+	}
+}
+
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}

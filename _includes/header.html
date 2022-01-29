@@ -1,0 +1,8 @@
+			<header>
+				<a href="{% link index.html %}"><img id="compass" src="/Icons/Compass-Rose-Black-Background.svg" alt="Compass logo base"></a><img id="needle" src="/Icons/Compass-Rose-Black-Needle.svg" alt="Compass logo needle"><h1>
+					{% if page.title %}
+						{{page.title | capitalize}}
+					{% else %}
+						{{page.tag | capitalize}}
+					{% endif %}</h1>
+			</header>	

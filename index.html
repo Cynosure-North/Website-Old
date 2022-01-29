@@ -1,0 +1,29 @@
+---
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		{% include head.html %}
+	    {% feed_meta %}
+	</head>	
+
+	<body onload="init()" onresize="resize()">
+		<canvas id="gradient" style="width: 100%; height: 100%;"></canvas>
+		<canvas id="mask"></canvas> 
+		<div id="window">
+			<header>
+				<a href="/"><img id="compass" src="/Icons/Compass-Rose-Black-Background.svg"></a><img id="needle" src="/Icons/Compass-Rose-Black-Needle.svg" alt="Compass logo"><h1>Home</h1>
+			</header>
+			<p>Hi there. I'm <a href="{% link _posts/0001-01-01-me.md %}">North</a>, and this website is a hub for my projects.<br>
+				It's a little sparse right now, because it's very new. But there's lots to come<br>
+			</p>
+			<a href="{% link _posts/0001-01-01-me.md %}">Me!</a>
+			<br>
+			<a href="Art/__junction__.html"><h2>Arty things</h2></a><br>
+			<a href="Tech/__junction__.html"><h2>Tech stuff</h2></a><br>
+		</div>
+		{% include footer.html %}
+	</body>
+</html>

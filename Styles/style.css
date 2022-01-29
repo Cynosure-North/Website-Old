@@ -1,0 +1,133 @@
+*{
+	/*margin: 0px;*/
+}
+
+*:focus-visible{
+	filter:invert(100%) drop-shadow(0px 0px 5px #000);
+}
+
+#gradient{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#window{
+	position: fixed;
+	top: 3%;
+	left: 2%;
+	width: 1000px;
+
+	background-color: #fff3;
+	padding: 0px 20px 20px 20px;
+	border-radius: 20px;
+}
+
+#compass{
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: -10px;
+	width: 80px;
+	height: 80px;
+}
+
+#needle{
+	position: relative;
+	left: -80px;
+	width: 80px;
+	height: 80px;
+
+	pointer-events: none;
+	transition: transform 2s ease-in-out;
+}
+
+a:hover + #needle{
+	transform: rotate(180deg);
+}
+
+
+.sidebar{
+	position: absolute;
+	left: 1070px;
+	top:  20px;
+	width: 500px;
+}
+
+
+body{
+	overflow: hidden;
+}
+
+header{
+	height: 70px;
+}
+
+h1{
+	display: inline-block;
+	position: relative;
+	top: -0.9em;
+	font-family: 'Righteous', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+h2{
+	font-family: 'Righteous', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+p{
+	font-family: 'Fira Code', monospace;
+	font-weight: 500;
+	clear: left;
+}
+
+a{
+	display: inline-block;
+	height: 0px;
+	font-weight: 700;
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover, a:active{
+	text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1620px) {
+
+	.sidebar{
+		left: calc(100% + 15px);
+	}
+
+	#window{
+		top: 3%;
+		left: 2%;
+		right: 2%;
+		width: calc(96% - 550px);
+}
+
+@media screen and (max-width: 1200px) {
+
+	#window{
+		width: calc(96% - 40px);
+	}
+	
+	.sidebar{
+		position: static;
+		width: 100%;
+	}
+
+}
+
+@media (scripting: none) or (scripting:  initial) or (prefers-reduced-motion){
+	canvas{
+		display: none;
+	}
+}

@@ -1,0 +1,19 @@
+---
+title: tags
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body onload="init()" onresize="resize()">
+		<canvas id="gradient" style="width: 100%; height: 100%;"></canvas>
+		<canvas id="mask"></canvas>
+		<div id="window">
+			{% include header.html %}
+		</div>
+		{% include footer.html %}
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		{%include head.html %}
+	</head>	 
+
+	<body onload="init()" onresize="resize()">
+		<canvas id="gradient" style="width: 100%; height: 100%;"></canvas>
+		<canvas id="mask"></canvas>
+		<div id="window">
+			<header>
+				<a href="index.html"><img id="compass" src="/Icons/Compass-Rose-Black-Background.svg"></a><img id="needle" src="/Icons/Compass-Rose-Black-Needle.svg" alt="Compass logo"><h1>{{ page.title }}</h1>
+			</header>
+			{{content}}
+		</div>
+
+		{%for tag in page.tags%}
+			<a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty'}}">{{ tag[0] | capitalize}} {{ tag[1].size }}</a>
+		{% endfor %}
+		{% include footer.html %}
+	</body>
+</html>

@@ -1,0 +1,4 @@
+# Specify filepatterns you want git to ignore.
+/.subl/
+/.jekyll-cache/
+/_site/

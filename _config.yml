@@ -1,0 +1,14 @@
+tite: Cynosure
+description: Now in rainbow
+url: cynosure.page
+author: North
+
+permalink: :year-:month-:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll/tagging  #It has a slash!! 3 hours wasted
+
+tag_page_layout: tag_page
+tag_page_dir: tag    
