@@ -1,0 +1,7 @@
+<footer>
+			<div>
+			{% for tag in site.tags %}
+				<a href="/{{ site.tag_page_dir }}/{{ tag[0] }}">{{ tag[0] | capitalize}}</a>
+			{% endfor %}
+			</div>
+</footer>
