@@ -1,27 +1,11 @@
 .glitch {
   font-weight: 700;
-  /*font-size: 10em;*/
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
 
   animation: glitch-text 1199ms infinite 200ms;
-  animation-fill-mode: forwards;
 }
 
 .glitch-shadow {
-  font-weight: 700;
-  /*font-size: 10em;*/
-  position: absolute;
-  left: 50%;
-  /* transform: translate(-50%, 0); */
-
-  animation: glitch-shadow 540ms infinite 200ms, rotate 637ms infinite 20ms;
-  animation-fill-mode: forwards;
-}
-
-a:hover + .glitch-shadow{
-	transform: rotate(180deg);
+  animation: glitch-shadow 556ms infinite 400ms, rotate 637ms infinite 20ms alternate;
 }
 
 .glitch::before,
@@ -126,15 +110,13 @@ a:hover + .glitch-shadow{
 }
 
 @keyframes outer {
-  0% {
-    opacity: 30%;
+  0% { 
+    opacity: 30%; 
   }
-
   14% {
     opacity: 20%;
     transform: translate(-0.02em, -0.013em);
   }
-
   15% {
     opacity: 100%;
     transform: translate(0.01em, 0.008em), rotate(-0.5deg);
@@ -152,58 +134,30 @@ a:hover + .glitch-shadow{
   }
 }
 
-@keyframes hover{
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100%{
-    transform: rotate(180deg);
-  }
-}
-
 @keyframes rotate{
-  0% {
-    transform: rotate(4deg);
-  }
-
-  14% {
-    transform: rotate(3deg);
-  }
-
-  15% {
-    transform: rotate(-2deg)
-  }
-  49% {
-    transform: rotate(1deg);
-  }
-  50% {
-    transform: rotate(-4deg);
-  }
-  60% {
-    transform: rotate(4deg);
-  }
-  85% {
-    transform: rotate(2deg);
-  }
+  0% { transform: rotate(4deg); }
+  7% { transform: rotate(3deg); }
+  10% { transform: rotate(-1deg); }
+  14% { transform: rotate(4deg); }
+  15% { transform: rotate(-2deg); }
+  16% { transform: rotate(-3deg); }
+  35% { transform: rotate(-12deg); }
+  49% { transform: rotate(1deg); }
+  50% { transform: rotate(-4deg); }
+  55% { transform: rotate(-6deg); }
+  60% { transform: rotate(4deg); }
+  75% { transform: rotate(8deg); }
+  80% { transform: rotate(-4deg); }
+  85% { transform: rotate(2deg); }
+  97% { transform: rotate(-8deg); }
 }
 
 @keyframes before {
-  0% {
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  }
-  20% {
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%);
-  }
-  22% {
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
-  }
-  75% {
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
-  }
-  76% {
-    clip-path: polygon(0 0, 100% 0, 100% 5%, 0 75%);
-  }
+  0% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); }
+  20% { clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%); }
+  22% { clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%); }
+  75% { clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%); }
+  76% { clip-path: polygon(0 0, 100% 0, 100% 5%, 0 75%); }
 }
 
 @media (prefers-reduced-motion: reduce) {

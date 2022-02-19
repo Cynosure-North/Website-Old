@@ -10,7 +10,7 @@ redirect_from: :title
 	    {% feed_meta %}
 	</head>	
 
-	<body onload="init()" onresize="resize()">
+	<body> 
 		<div id="window">
 			{% include logo.html %}
 			<h1 id="title" class="glitch" content="░𝚈 _ ∴ 𝒮⤋ℝ!">
@@ -20,14 +20,3 @@ redirect_from: :title
 		</div>
 	</body>
 </html>
-
-<script type="text/javascript">
-	let title = document.getElementById("title");
-	
-	function resize(){
-		var prev = title.style.transform;
-		console.log(1920 - window.innerWidth/10 );
-		title.style.transform = "translate(-50%, 0%)" + " " + "rotate(" + 1920 - window.innerWidth/10 + "deg)";
-	}
-
-</script>
