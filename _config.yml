@@ -3,7 +3,7 @@ description: Now in rainbow
 url: cynosure.page
 author: North
 
-permalink: :year-:month-:day/:title/
+permalink: :year-:month-:day/:title
 
 plugins:
   - jekyll-feed
