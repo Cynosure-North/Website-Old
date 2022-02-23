@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ jekyll ]
 
-jobs:s
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
