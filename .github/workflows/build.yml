@@ -22,6 +22,7 @@ jobs:
       if: ${{ github.ref == 'refs/heads/jekyll' }}
       run: |
         sudo chown ${USER}:${USER} ${{ github.workspace }}/_site
+        sudo chmod 777 ${{ github.workspace }}/srv/jekyll/Gemfile.lock
         cd ${{ github.workspace }}/_site
         git init -b gh-pages
         git config user.name ${{ github.actor }}
