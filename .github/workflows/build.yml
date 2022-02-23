@@ -17,12 +17,11 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chown jekyll:jekyll /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chown jekyll:jekyll /srv/jekyll && chown jekyll:jekyll /srv/jekyll/Gemfile.lock && chown jekyll:jekyll /srv/jekyll/Gemfile" && JEKYLL_ENV=production jekyll build --future"
     - name: Push the site to the gh-pages branch
       if: ${{ github.ref == 'refs/heads/jekyll' }}
       run: |
         sudo chown ${USER}:${USER} ${{ github.workspace }}/_site
-        sudo chmod 777 ${{ github.workspace }}/srv/jekyll/Gemfile.lock
         cd ${{ github.workspace }}/_site
         git init -b gh-pages
         git config user.name ${{ github.actor }}
