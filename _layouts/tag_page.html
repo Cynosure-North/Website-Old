@@ -1,7 +1,3 @@
----
-permalink: /title
----
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,13 +6,15 @@ permalink: /title
 
 	<body onload="init()" onresize="resize()">
 		<div id="column">
-			{% include header.html %}
-			<ul>
-			{% for post in page.posts %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
-			{% endfor %}
-			</ul>	
-			{% include footer.html %}
+			<div id="tags">
+				{% include header.html %}
+				<ul>
+				{% for post in page.posts %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
+				{% endfor %}
+				</ul>	
+				{% include footer.html %}
+			</div>
 		</div>
 	</body>
 	<script>0</script> <!-- Firefox FOUS hack -->

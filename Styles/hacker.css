@@ -42,3 +42,10 @@ h1{
 footer{
 	padding: 20px 0px 40px 0px;
 }
+
+
+#tags ul { list-style-type: none; }
+#tags li { 
+	padding: 10px 0px 10px 0px;
+	font-size: 1.1em;
+}
