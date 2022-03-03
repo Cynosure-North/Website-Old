@@ -5,14 +5,17 @@
 	</head>
 
 	<body onload="init()" onresize="resize()">
-		<div id="window">
-			{% include header.html %}
-			<ul>
-			{% for post in page.posts %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
-			{% endfor %}
-			</ul>	
+		<div id="column">
+			<div id="tags">
+				{% include header.html %}
+				<ul>
+				{% for post in page.posts %}
+					<li ><a href="{{ post.url }}">{{ post.title }}</a>      {{ post.date | date_to_string }} | {{ post | tags }}</li>
+				{% endfor %}
+				</ul>	
+				{% include footer.html %}
+			</div>
 		</div>
-		{% include all_tags_footer.html %}
 	</body>
+	<script>0</script> <!-- Firefox FOUS hack -->
 </html>

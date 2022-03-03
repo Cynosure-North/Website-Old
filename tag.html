@@ -1,5 +1,6 @@
 ---
 title: tags
+permalink: /tag
 ---
 
 <!DOCTYPE html>
@@ -8,10 +9,11 @@ title: tags
 		{% include head.html %}
 	</head>
 
-	<body onload="init()" onresize="resize()">
+	<body>
 		<div id="column">
 			{% include header.html %}
+			
+			{% include footer.html %}
 		</div>
-		{% include all_tags_footer.html %}
 	</body>
 </html>
