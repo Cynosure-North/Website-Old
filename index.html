@@ -25,5 +25,10 @@ redirect_from: :title
 			<p>Lorem Ipsum: <a href="{% link _posts/0001-01-01-Test.md %}">Test</a></p>
 		</div>
 	</body>
-	<script>0</script> <!-- Firefox FOUS hack -->
+	<script>
+		// If you know how to make the font render same on mobile get in touch
+		if (navigator.userAgent.contains("Mobi")){
+			document.getElementById("title").content = "░𝚈 _∴𝒮 ⤋ℝ!";
+		}
+	</script>
 </html>

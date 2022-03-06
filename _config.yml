@@ -12,3 +12,16 @@ plugins:
 
 tag_page_layout: tag_page
 tag_page_dir: tag    
+
+kramdown:
+  # syntax_highlighter_opts:
+    # formatter: HTMLLineHighlighter
+    # css_class: 'highlight'
+    # gutter_class: 'gutter'
+    # table_class: 'table'
+    # span:
+    #   line_numbers: false
+    # block:
+    #   line_numbers: true
+    #   start_line: 1
+ 
