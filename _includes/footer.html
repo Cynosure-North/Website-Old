@@ -2,6 +2,10 @@
 	<hr>
 	{% if page.date %}
 		<p> Posted: {{page.date | date_to_long_string }} </p>
+		{% if page.modified_date %}
+			<!-- <p style="white-space: pre;">Posted: {{page.date | date_to_long_string }}       Edited: {{page.modified_date | date_to_long_string }}</p> -->
+			<p>Edited: {{page.modified_date | date_to_long_string }}</p>
+		{% endif %}
 	{% endif %}
 	{% if page.tags %}
 		{% for tag in page.tags %}
