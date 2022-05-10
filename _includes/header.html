@@ -1,12 +1,12 @@
 			<header>
-				{% include logo.html %}<div id="title-container"><h1 class="glitch" content="{% if page.title %}
-						{{page.title | capitalize}}
-					{% else %}
-						{{page.tag | capitalize}}
-					{% endif %}">
-					{% if page.title %}
-						{{page.title | capitalize}}
-					{% else %}
-						{{page.tag | capitalize}}
-					{% endif %}</h1></div>
+				{%include logo.html %}<div id="title-container"><h1 class="glitch" content="{% if page.title %}
+						{{page.title}}
+					{%else %}
+						{{page.tag}}
+					{%endif %}">
+					{%if page.title %}
+						{{page.title}}
+					{%else %}
+						{{page.tag}}
+					{%endif %}</h1></div>
 			</header>	

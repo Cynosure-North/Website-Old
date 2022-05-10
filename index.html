@@ -4,26 +4,29 @@ redirect_from: :title
 ---
 
 <!DOCTYPE html>
-<html lang="en" >
-	<head>
-		{% include head.html %}
-	    {% feed_meta %}
-		<link rel="stylesheet" type="text/css" href="/Styles/index.css"/>
-	</head>	
+<html lang="en">
 
-	<body> 
-		<div id="title-container">
-			<h1 id="title" class="glitch" content="░𝚈 _ ∴ / ⮍ℝ!">
-				CYNOSURE
-			</h1>
-		</div>
-		<div id="column">
-			{% include logo.html %}
-			<p>Hi there. I'm <a href="{% link _posts/0001-01-01-me.md %}">North</a>, and this website is a hub for my projects.<br>
-				It's a little sparse right now, because it's very new. But there's lots to come<br>
-			</p>
-			<p>Lorem Ipsum: <a href="{% link _posts/0001-01-01-Test.md %}">Test</a></p>
-		</div>
-	</body>
-	<script>0</script> <!-- Firefox FOUS hack -->
+<head>
+	{% include head.html %}
+	{% feed_meta %}
+	<link rel="stylesheet" type="text/css" href="/Styles/index.css" />
+</head>
+
+<body>
+	<div id="title-container">
+		<h1 id="title" class="glitch text-flicker" content="░𝚈 _ ∴ / ⮇ℝ!">
+			CYNOSURE
+		</h1>
+	</div>
+	<div id="column">
+		{% include logo.html %}
+		<p>Hi there. I'm <a href="{% link _posts/0001-01-01-me.md %}">North</a>, and this website is a hub for my
+			projects.<br>
+			It's a little sparse right now, because it's very new. But there's lots to come<br>
+		</p>
+		<p>Lorem Ipsum: <a href="{% link _posts/0001-01-01-Test.md %}">Test</a></p>
+	</div>
+</body>
+<script>0</script> <!-- Firefox FOUS hack -->
+
 </html>
